@@ -3,8 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Angula1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
-  <body>
-    <h1>Angular1</h1>
+  <body ng-app="my-app" ng-controller="myCtrl as vm">
+    <h1>{{vm.title}}</h1>
+    <input type="text" ng-model="vm.title">
+    <button ng-click="vm.add()">Add!</button>
+    <ul>
+      <li ng-repeat="text in vm.list">
+        {{text}}
+      </li>
+    </ul>
   </body>
 </html>

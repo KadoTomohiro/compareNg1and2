@@ -1,1 +1,10 @@
-<h1>My First Angular 2 App</h1>
+<h1>{{title}}</h1>
+<div class="">
+  <input [(ng-model)]="title" type="text">
+  <button (click)="add()">Add!</button>
+  <ul>
+    <li *ng-for="#text of list">
+    {{text}}
+  </li>
+  </ul>
+</div>
